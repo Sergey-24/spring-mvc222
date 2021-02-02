@@ -6,7 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import web.model.Car;
-import web.service.CarServiceImpl;
+import web.service.CarService;
 
 import java.util.List;
 
@@ -15,7 +15,7 @@ import java.util.List;
 public class CarController {
 
     @Autowired
-    public CarServiceImpl carService;
+    public CarService carService;
 
     @RequestMapping
     public String printCars(Model model, @RequestParam(value = "count", required = false) Integer count) {
